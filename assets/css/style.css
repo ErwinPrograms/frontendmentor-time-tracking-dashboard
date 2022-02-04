@@ -225,7 +225,7 @@ input[type="radio"]:checked + label{
 
 .time-block-content {
     position: absolute;
-    bottom: 0;
+    bottom: -1px;
     width: 100%;
     padding: 1.4em;
     min-height: calc(100% - 2.9em);
