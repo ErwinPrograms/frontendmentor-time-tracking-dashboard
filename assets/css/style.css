@@ -79,6 +79,7 @@ input[type="radio"]:checked + label{
 
 .dashboard-container {
     width: 100vw;
+    min-height: 100vh;
     padding-top: 5em;
 
     display: flex;
@@ -105,8 +106,8 @@ input[type="radio"]:checked + label{
 /* 2.1) Primary Report Block */
 
 .report-primary-block {
-    min-height: var(--min-block-height);
-    height: 12.75em;
+    min-height: 12.75em;
+    max-height: 32.5em;
 
     background-color: var(--block-color);
 
@@ -117,6 +118,7 @@ input[type="radio"]:checked + label{
 
 .report-profile {
     width: 100%;
+    /* flex-grow: 1; */
 
     background-color: var(--primary-report-color);
     border-radius: var(--block-border-radius);
@@ -170,7 +172,8 @@ input[type="radio"]:checked + label{
 
 .time-block {
     /* TODO: Make height responsive */
-    height: var(--min-block-height);
+    min-height: var(--min-block-height);
+    max-height: 15.25em;
     
     position: relative;
     background-repeat: no-repeat;
@@ -284,4 +287,74 @@ input[type="radio"]:checked + label{
     grid-area: previous;
     justify-self: end;
     align-self: center;
+}
+
+
+
+/* Media Queries */
+@media screen and (min-width: 1440px) {
+    body {
+        display: grid;
+        grid-template-rows: 100vh 3em;
+    }
+    .dashboard-container {
+        justify-self: center;
+        align-self: center;
+        max-width: 71em;
+
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+            "report time-block-1 time-block-2 time-block-3" 
+            "report time-block-4 time-block-5 time-block-6";
+        grid-column-gap: 0;
+        grid-row-gap: 2em;
+    }
+
+    .report-primary-block,
+    .time-block {
+        margin: 0;
+    }
+
+    .report-primary-block {
+        grid-area: report;
+        align-self: center;
+        
+    }
+
+    .timespan-groups {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .time-block.work {
+        grid-area: time-block-1;
+        align-self: flex-end;
+    }
+
+    .time-block.play {
+        grid-area: time-block-2;
+        align-self: flex-end;
+    }
+
+    .time-block.study {
+        grid-area: time-block-3;
+        align-self: flex-end;
+    }
+
+    .time-block.exercise {
+        grid-area: time-block-4;
+        align-self: flex-start;
+    }
+
+    .time-block.social {
+        grid-area: time-block-5;
+        align-self: flex-start;
+    }
+
+    .time-block.self-care {
+        grid-area: time-block-6;
+        align-self: flex-start;
+    }
 }
