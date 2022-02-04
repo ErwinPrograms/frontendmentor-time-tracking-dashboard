@@ -193,6 +193,29 @@ input[type="radio"]:checked + label{
     grid-area: title;
 }
 
+/* TODO: Make ellipsis more responsive */
+
+.ellipsis-menu {
+    width: 1.5em;
+
+    justify-self: end;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ellipsis-menu:hover {
+    cursor: pointer;
+}
+
+.ellipsis-menu div {
+    height: .4em;
+    width: .4em;
+    background-color: var(--secondary-text-color);
+    border-radius: 50%;
+}
+
 .num-hours {
     font-weight: 300;
 
