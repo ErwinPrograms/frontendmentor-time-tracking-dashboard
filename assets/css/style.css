@@ -107,7 +107,9 @@ input[type="radio"]:checked + label{
 
 .report-primary-block {
     min-height: 12.75em;
+    height: 40vw;
     max-height: 32.5em;
+    width: 100%;
 
     background-color: var(--block-color);
 
@@ -118,7 +120,7 @@ input[type="radio"]:checked + label{
 
 .report-profile {
     width: 100%;
-    /* flex-grow: 1; */
+    min-height: 60%;
 
     background-color: var(--primary-report-color);
     border-radius: var(--block-border-radius);
@@ -173,7 +175,9 @@ input[type="radio"]:checked + label{
 .time-block {
     /* TODO: Make height responsive */
     min-height: var(--min-block-height);
+    height: 40vw;
     max-height: 15.25em;
+    width: 100%;
     
     position: relative;
     background-repeat: no-repeat;
@@ -182,37 +186,37 @@ input[type="radio"]:checked + label{
 .time-block.work {
     background-color: var(--work-report-color);
     background-image: url('../images/icon-work.svg');
-    background-position: 93% -14%;
+    background-position: 93% -12px;
 }
 
 .time-block.play {
     background-color: var(--play-report-color);
     background-image: url('../images/icon-play.svg');
-    background-position: 93% -8%;
+    background-position: 93% -6px;
 }
 
 .time-block.study {
     background-color: var(--study-report-color);
     background-image: url('../images/icon-study.svg');
-    background-position: 93% -10%;
+    background-position: 93% -8px;
 }
 
 .time-block.exercise {
     background-color: var(--exercise-report-color);
     background-image: url('../images/icon-exercise.svg');
-    background-position: 93% -3%;
+    background-position: 93% -2.5px;
 }
 
 .time-block.social {
     background-color: var(--social-report-color);
     background-image: url('../images/icon-social.svg');
-    background-position: 93% -25%;
+    background-position: 95% -15px;
 }
 
 .time-block.self-care {
     background-color: var(--self-care-report-color);
     background-image: url('../images/icon-self-care.svg');
-    background-position: 93% -15%;
+    background-position: 95% -12px;
 }
 
 /* 2.2.2) Time Content */
@@ -300,7 +304,7 @@ input[type="radio"]:checked + label{
     .dashboard-container {
         justify-self: center;
         align-self: center;
-        max-width: 71em;
+        max-width: 70em;
 
         display: grid;
         grid-template-rows: 1fr 1fr;
@@ -308,7 +312,7 @@ input[type="radio"]:checked + label{
         grid-template-areas: 
             "report time-block-1 time-block-2 time-block-3" 
             "report time-block-4 time-block-5 time-block-6";
-        grid-column-gap: 0;
+        grid-column-gap: 2em;
         grid-row-gap: 2em;
     }
 
