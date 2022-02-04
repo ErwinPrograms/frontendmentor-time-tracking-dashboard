@@ -1,3 +1,14 @@
+/*
+    Table of Contents
+    
+    1.) Global Styles
+    2.) Blocks
+        2a.) Primary Report Block
+        2b.) Time Blocks
+*/
+
+/* 1.) Global styles */
+
 * {
     box-sizing: border-box;
     font-family: 'Rubik', sans-serif;
@@ -15,9 +26,9 @@
     --exercise-report-color: hsl(145, 58%, 55%);
     --social-report-color: hsl(264, 64%, 52%);
     --self-care-report-color: hsl(43, 84%, 65%) ;
-}
 
-/* Global styles */
+    --block-border-radius: 1em;
+}
 
 body {
     margin: 0;
@@ -52,16 +63,73 @@ input[type="radio"]:checked + label{
     color: var(--emphasized-text-color);
 }
 
-/*  */
+/* 2.) Blocks */
 
 .report-primary-block,
 .time-block {
     margin: 1em;
-    background-color: var(--block-color);
-    border-radius: 1em;
+    border-radius: var(--block-border-radius);
 }
 
-/* Time-block & children */
+/* 2a.) Primary Report Block */
+.report-primary-block {
+    background-color: var(--block-color);
+}
+
+.report-profile {
+    background-color: var(--primary-report-color);
+    border-radius: var(--block-border-radius);
+}
+
+/* 2b.) Time Blocks */
+
+.time-block {
+    /* TODO: Make height responsive */
+    height: 10em;
+    
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: 90% 0%;
+}
+
+.time-block.work {
+    background-color: var(--work-report-color);
+    background-image: url('../images/icon-work.svg');
+}
+
+.time-block.play {
+    background-color: var(--play-report-color);
+    background-image: url('../images/icon-play.svg');
+}
+
+.time-block.study {
+    background-color: var(--study-report-color);
+    background-image: url('../images/icon-study.svg');
+}
+
+.time-block.exercise {
+    background-color: var(--exercise-report-color);
+    background-image: url('../images/icon-exercise.svg');
+}
+
+.time-block.social {
+    background-color: var(--social-report-color);
+    background-image: url('../images/icon-social.svg');
+}
+
+.time-block.self-care {
+    background-color: var(--self-care-report-color);
+    background-image: url('../images/icon-self-care.svg');
+}
+
+.time-block-content {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+
+    background-color: var(--block-color); 
+    border-radius: var(--block-border-radius);
+}
 
 .num-hours {
     display: none;
