@@ -1,0 +1,72 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+
+    --background-color: hsl(226, 43%, 10%);
+    --block-color: hsl(235, 46%, 20%);
+    --emphasized-text-color : hsl(0, 100%, 100%);
+    --unemphasized-text-color: hsl(235, 45%, 61%);
+    --mystery-text-color: hsl(236, 100%, 87%);
+
+    --primary-report-color: hsl(246, 80%, 60%);
+    --work-report-color: hsl(15, 100%, 70%);
+    --play-report-color: hsl(195, 74%, 62%);
+    --study-report-color: hsl(348, 100%, 68%);
+    --exercise-report-color: hsl(145, 58%, 55%);
+    --social-report-color: hsl(264, 64%, 52%);
+    --self-care-report-color: hsl(43, 84%, 65%) ;
+}
+
+/* Global styles */
+
+body {
+    margin: 0;
+    background-color: var(--background-color);
+    color: var(--emphasized-text-color);
+}
+
+h1 {
+    margin: 0;
+    font-weight: lighter;
+}
+
+p {
+    color: var(--mystery-text-color);
+}
+
+/* Radio input styles */
+
+input[type="radio"] {
+    appearance: none;
+}
+
+input[type="radio"] + label {
+    color: var(--unemphasized-text-color);
+}
+
+input[type="radio"] + label:hover {
+    cursor: pointer;
+}
+
+input[type="radio"]:checked + label{
+    color: var(--emphasized-text-color);
+}
+
+/*  */
+
+.report-primary-block,
+.time-block {
+    margin: 1em;
+    background-color: var(--block-color);
+    border-radius: 1em;
+}
+
+/* Time-block & children */
+
+.num-hours {
+    display: none;
+}
+
+.num-hours.active {
+    display: block;
+}
