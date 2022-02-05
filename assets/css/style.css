@@ -66,10 +66,14 @@ input[type="radio"] + label {
 
 input[type="radio"] + label:hover {
     cursor: pointer;
+    color: var(--emphasized-text-color);
+    opacity: 0.8;
 }
 
-input[type="radio"]:checked + label{
+input[type="radio"]:checked + label,
+input[type="radio"]:checked:hover + label{
     color: var(--emphasized-text-color);
+    opacity: 1;
     position: relative;
     top: 2px;
     left: 5px;
@@ -223,6 +227,10 @@ input[type="radio"]:checked + label{
 
 /* 2.2.2) Time Content */
 
+.time-block:hover .time-block-content {
+    background-color: hsl(235, 46%, 35%);
+}
+
 .time-block-content {
     position: absolute;
     bottom: -1px;
@@ -262,6 +270,10 @@ input[type="radio"]:checked + label{
 
 .ellipsis-menu:hover {
     cursor: pointer;
+}
+
+.ellipsis-menu:hover div {
+    background-color: var(--emphasized-text-color);
 }
 
 .ellipsis-menu div {
@@ -411,8 +423,8 @@ input[type="radio"]:checked + label{
         justify-self: center;
 
         margin-top: .3em;
-        margin-left: .3em;
-        width: 1em;
+        margin-left: .7em;
+        width: 1.3em;
     }
 
     .time-block .num-hours.current {
