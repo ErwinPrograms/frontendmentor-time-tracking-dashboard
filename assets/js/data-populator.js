@@ -1,5 +1,3 @@
-//https://www.youtube.com/watch?v=cuEtnrL9-H0&ab_channel=WebDevSimplified
-
 fetch('../../data.json')    //fetch() returns a promise
     .then(response => response.json())  //json() retruns another promise
     .then(data => populateData(data));   //when that promise is resolved, we then handle it in this function
