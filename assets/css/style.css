@@ -410,8 +410,8 @@ input[type="radio"]:checked:hover + label{
     .time-block-content {
         grid-template-areas: 
         "title more-info"
-        "current ."
-        "previous .";
+        "current current"
+        "previous previous";
 
         padding-top: 1em;
         padding-left: 2.2em;
