@@ -28,7 +28,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Frontend Mentor](https://www.frontendmentor.io/challenges/time-tracking-dashboard-UIQ7167Jw/hub/responsive-time-tracking-page-b7AakDj9O)
+- Solution URL: [Frontend Mentor](https://www.frontendmentor.io/solutions/responsive-time-tracking-page-b7AakDj9O)
 - Live Site URL: [Github Pages](https://erwinprograms.github.io/frontendmentor-time-tracking-dashboard/)
 
 ## My process
